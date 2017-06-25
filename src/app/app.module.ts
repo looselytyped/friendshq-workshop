@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {
   PeopleComponent,
   PersonListComponent,
+  ShowPersonComponent,
 } from './people';
 
 @NgModule({
@@ -12,6 +13,7 @@ import {
     AppComponent,
     PeopleComponent,
     PersonListComponent,
+    ShowPersonComponent,
   ],
   imports: [
     BrowserModule
