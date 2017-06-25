@@ -42,10 +42,18 @@ const FRIENDS: Friend[] = [
 })
 export class PersonListComponent implements OnInit {
   friends: Friend[] = FRIENDS;
+  displayBanner: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showBanner(friend: Friend) {
+    this.displayBanner = true;
+    setTimeout(() => {
+      this.displayBanner = false;
+    }, 3000);
   }
 
 }
