@@ -6,7 +6,10 @@ import {
   EventEmitter,
 } from '@angular/core';
 
-import { Friend } from "../../shared";
+import {
+  Friend,
+  FriendsService,
+} from "../../shared";
 
 @Component({
   selector: 'app-show-person',
@@ -17,13 +20,16 @@ export class ShowPersonComponent implements OnInit {
   @Input() friend: Friend;
   @Output() notifyParent: EventEmitter<Friend> = new EventEmitter();
 
-  constructor() { }
+  constructor(private friendService: FriendsService) { }
 
   ngOnInit() {
   }
 
   like() {
     this.friend.fav = !this.friend.fav;
-    this.notifyParent.emit(this.friend);
+    this.friendService.saveFriend(this.friend)
+      .subscribe(friend => {
+        this.notifyParent.emit(friend);
+      });
   }
 }
