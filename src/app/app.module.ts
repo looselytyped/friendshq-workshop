@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from "@angular/http";
 
 import { AppComponent } from './app.component';
 import {
@@ -7,6 +8,10 @@ import {
   PersonListComponent,
   ShowPersonComponent,
 } from './people';
+
+import {
+  FriendsService,
+} from "./shared";
 
 @NgModule({
   declarations: [
@@ -16,9 +21,12 @@ import {
     ShowPersonComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
   ],
-  providers: [],
+  providers: [
+    FriendsService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
