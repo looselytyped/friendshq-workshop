@@ -4,14 +4,22 @@ import {
   PeopleComponent,
 } from "./people";
 
+import {
+  DashboardComponent,
+} from "./dashboard";
+
 export const routes: Routes = [
   {
     path: 'people',
     component: PeopleComponent
   },
   {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
     path: '**',
-    redirectTo: 'people',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   },
 ];
