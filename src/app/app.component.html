@@ -9,8 +9,8 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Dashboard</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">People</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/people']">People</a>
         </li>
       </ul>
     </div>
@@ -18,7 +18,7 @@
 </div>
 
 <div class="container">
-  <app-people></app-people>
+  <router-outlet></router-outlet>
 </div>
 
 <footer class="footer text-center">
