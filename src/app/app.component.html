@@ -6,8 +6,8 @@
     <a href="/" class="navbar-brand d-flex w-50 mr-auto">Friends HQ</a>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/dashboard']">Dashboard</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['/people']">People</a>
