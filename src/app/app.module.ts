@@ -13,6 +13,9 @@ import {
 import {
   routes,
 } from "./app.routes";
+import {
+  DashboardComponent,
+} from './dashboard';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,7 @@ import {
     PeopleComponent,
     PersonListComponent,
     ShowPersonComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
