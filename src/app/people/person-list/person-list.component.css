@@ -1,0 +1,13 @@
+.person-list .list-group, .sidebar {
+  margin-top: 20px;
+}
+
+.person-list .list-group {
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+
+.person-list .sidebar .btn {
+  padding: 15px;
+  width: 100%;
+}
