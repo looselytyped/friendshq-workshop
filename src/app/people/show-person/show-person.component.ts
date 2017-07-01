@@ -27,9 +27,6 @@ export class ShowPersonComponent implements OnInit {
 
   like() {
     this.friend.fav = !this.friend.fav;
-    this.friendService.saveFriend(this.friend)
-      .subscribe(friend => {
-        this.notifyParent.emit(friend);
-      });
+    this.notifyParent.emit(this.friend);
   }
 }
