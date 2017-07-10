@@ -1,28 +1,90 @@
 # FriendsHq
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
+This is an Angular workshop using TypeScript. 
+It attempts to demonstrate creating a simple web application.
 
-## Development server
+The constructs that we see being employed in this workshop are
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Creating Angular components
+- Creating component hierarchies
+- Using the Angular style guide for naming and project layout
+- `@Input`s and `@Output`s
+- Services
+- Dependency Injection
+- Ajax using `Http` and `Observables`
+- Smart vs. Dumb components
+- Routes, routing, and the `router-outlet`
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+- Download and install `node` (`v7.6.0` or greater) per [this](https://nodejs.org/en/download/)
+  - This will install `npm` as well
+- Angular Cli - You will find instructions [here](https://github.com/angular/angular-cli#prerequisites)
 
-## Build
+### Optional (but highly recommended)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+- Install [Git](https://git-scm.com/downloads)
+- Install [Visual Studio Code](https://code.visualstudio.com/)
+  - Install the [EditorConfig extension](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+  - Install the [Angular v4 TypeScript Snippets extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2) by John Papa
+- Install [Google Chrome](https://www.google.com/chrome/index.html)
+  - Install the [Augury Extension](https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd?hl=en)
 
-## Running unit tests
+## Getting started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+First `git-clone` or [download]() this repository (Though it's preferred you clone)
 
-## Running end-to-end tests
+Then open a terminal, `cd` to the directory where you cloned this repository.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+**Make sure `node`/`npm` are in your path!**
 
-## Further help
+```
+npm install;
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Testing the installation
+
+Open **two** terminals.
+In both `cd` to the directory where you cloned this repository.
+
+**In the first one, run**
+
+```
+npm run server;
+```
+
+You should see something to the effect of
+
+```
+> friends-hq@0.0.0 server /Users/raju/Documents/presentations/Angular-with-TypeScript-Workshop/friendsHq
+> json-server --watch server/api/db.json
+
+
+  \{^_^}/ hi!
+
+  Loading server/api/db.json
+  Done
+
+  Resources
+  http://localhost:3000/friends
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+```
+
+**In the second terminal run**
+
+```
+ng serve;
+```
+
+Once the console is settled, visit [http://localhost:4200/](http://localhost:4200/) and you should see a `http://localhost:4200/` with followed by the Angular Logo.
+
+You are all set!
+
+## Credits
+
+This project is inspired by [Monica](https://github.com/monicahq/monica).
