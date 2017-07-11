@@ -39,7 +39,7 @@ Then open a terminal, `cd` to the directory where you cloned this repository.
 **Make sure `node`/`npm` are in your path!**
 
 ```
-npm install;
+npm install
 ```
 
 ## Testing the installation
@@ -50,7 +50,7 @@ In both `cd` to the directory where you cloned this repository.
 **In the first one, run**
 
 ```
-npm run server;
+npm run server
 ```
 
 You should see something to the effect of
@@ -78,7 +78,7 @@ You should see something to the effect of
 **In the second terminal run**
 
 ```
-ng serve;
+ng serve
 ```
 
 Once the console is settled, visit [http://localhost:4200/](http://localhost:4200/) and you should see a `http://localhost:4200/` with followed by the Angular Logo.
