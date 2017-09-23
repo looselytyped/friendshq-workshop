@@ -27,12 +27,13 @@
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
+    "popper.js": "^1.12.5",
     "rxjs": "^5.1.0",
     "tether": "^1.4.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.1.2",
+    "@angular/cli": "^1.4.2",
     "@angular/compiler-cli": "^4.0.0",
     "@angular/language-service": "^4.0.0",
     "@types/jasmine": "2.5.45",
