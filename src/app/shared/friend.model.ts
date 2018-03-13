@@ -1,7 +1,11 @@
+import { Gender } from "./gender.enum";
+
 export class Friend {
-  id: number;
-  first_name: string;
-  last_name: string;
-  gender: string;
-  fav: boolean;
+  constructor(
+    public id: number,
+    public first_name: string,
+    public last_name: string,
+    public gender: Gender,
+    public fav: boolean
+  ) { }
 }

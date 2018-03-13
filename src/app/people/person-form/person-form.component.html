@@ -1,0 +1,57 @@
+<div class="col-xs-12 col-md-12">
+  <h1>Add a new person</h1>
+  <form #addNewPersonForm="ngForm"
+        (ngSubmit)="onSubmit(addNewPersonForm)">
+    <div class="form-group">
+      <label for="first-name">First name</label>
+      <input type="text"
+             class="form-control"
+             id="first-name"
+             [(ngModel)]="model.first_name"
+             name="firstName"
+             #firstName="ngModel"
+             required>
+      <div [hidden]="firstName.valid || firstName.pristine"
+           class="alert alert-danger">
+        First name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="last-name">Last name</label>
+      <input type="text"
+             class="form-control"
+             id="last-name"
+             [(ngModel)]="model.last_name"
+             name="lastName"
+             #lastName="ngModel"
+             required>
+      <div [hidden]="lastName.valid || lastName.pristine"
+           class="alert alert-danger">
+        Last name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="gender">Last name</label>
+      <select id="gender"
+              [(ngModel)]="model.gender"
+              name="gender">
+        <option *ngFor="let gender of genders | enumToArray"
+                [value]="gender.value">
+          {{gender.key}}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="fav">Fav?</label>
+      <input type="checkbox"
+             class="form-control"
+             id="fav"
+             [(ngModel)]="model.fav"
+             name="fav"
+             checked>
+    </div>
+    <button type="submit"
+            class="btn btn-success"
+            [disabled]="!addNewPersonForm.valid">Submit</button>
+  </form>
+</div>
