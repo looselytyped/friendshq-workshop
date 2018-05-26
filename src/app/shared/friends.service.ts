@@ -32,4 +32,10 @@ export class FriendsService {
       JSON.stringify(friend),
       { headers: this.headers });
   }
+
+  addFriend(friend: Friend): Observable<Friend> {
+    return this.http.post<Friend>(`${BASE_URL}/friends`,
+      JSON.stringify(friend),
+      { headers: this.headers });
+  }
 }
