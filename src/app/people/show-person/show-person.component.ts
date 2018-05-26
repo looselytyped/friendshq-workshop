@@ -18,4 +18,8 @@ export class ShowPersonComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  like() {
+    this.friend.fav = !this.friend.fav;
+  }
 }
