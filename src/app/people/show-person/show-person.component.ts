@@ -2,6 +2,8 @@ import {
   Component,
   OnInit,
   Input,
+  Output,
+  EventEmitter,
 } from '@angular/core';
 
 import { Friend } from "../../shared";
@@ -13,6 +15,7 @@ import { Friend } from "../../shared";
 })
 export class ShowPersonComponent implements OnInit {
   @Input() friend: Friend;
+  @Output() notifyParent: EventEmitter<Friend> = new EventEmitter();
 
   constructor() { }
 
@@ -21,5 +24,6 @@ export class ShowPersonComponent implements OnInit {
 
   like() {
     this.friend.fav = !this.friend.fav;
+    this.notifyParent.emit(this.friend);
   }
 }
