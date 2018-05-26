@@ -3,7 +3,8 @@
     <div class="col-xs-12 col-md-9">
       <div class="list-group">
         <app-show-person *ngFor="let friend of friends"
-                         [friend]=friend></app-show-person>
+                         [friend]=friend
+                         (notifyParent)="showBanner($event)"></app-show-person>
       </div>
     </div>
     <div class="col-xs-12 col-md-3 sidebar">
@@ -11,6 +12,13 @@
          class="btn btn-success sidebar-cta disabled">
         Add someone
       </a>
+    </div>
+    <div class="col-xs-12 col-md-9">
+      <div *ngIf="displayBanner"
+           class="alert alert-success box-msg"
+           role="alert">
+        <strong>List Saved!</strong> Your changes has been saved.
+      </div>
     </div>
   </div>
 </div>
