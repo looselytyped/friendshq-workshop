@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import {
   FormGroup,
   FormControl,
+  FormBuilder,
   Validators
 } from '@angular/forms';
 
@@ -25,19 +26,30 @@ export class PersonFormComponent implements OnInit {
     fav: false,
   }
 
-  addNewPersonForm = new FormGroup({
-    firstName: new FormControl(this.model.firstName, [Validators.required]),
-    lastName: new FormControl(this.model.lastName, [Validators.required]),
-    gender: new FormControl(this.model.gender),
-    fav: new FormControl(this.model.fav),
-  });
+  addNewPersonForm: FormGroup;
 
   submitted = false;
   genders = Gender;
 
   constructor(
     private router: Router,
-  ) { }
+    private fb: FormBuilder,
+  ) {
+    this.addNewPersonForm = fb.group({
+      firstName: [this.model.firstName, [Validators.required]],
+      lastName: [this.model.lastName, [Validators.required]],
+      gender: [this.model.gender],
+      fav: [this.model.fav],
+    });
+
+    this.addNewPersonForm.valueChanges.forEach(
+      (value: string) => console.log(value)
+    );
+    this.addNewPersonForm.get('firstName').valueChanges.forEach(
+      (value: string) => console.log(value)
+    );
+
+  }
 
   ngOnInit() {
   }
