@@ -6,8 +6,10 @@
     </h5>
     <small>
       <div class="heart-rating">
-        <span class="fa fa-heart"
-              data-rating="1"></span>
+        <span class="fa"
+              [ngClass]="(friend.fav)?'fa-heart':'fa-heart-o'"
+              data-rating="1"
+              (click)="like(); false;"></span>
       </div>
     </small>
   </div>
