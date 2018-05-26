@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   Friend,
   Gender,
+  FriendsService,
 } from '../../shared';
 import { Router } from '@angular/router';
 import {
@@ -34,6 +35,7 @@ export class PersonFormComponent implements OnInit {
   constructor(
     private router: Router,
     private fb: FormBuilder,
+    private friendsService: FriendsService,
   ) {
     this.addNewPersonForm = fb.group({
       firstName: [this.model.firstName, [Validators.required]],
@@ -56,6 +58,7 @@ export class PersonFormComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    this.router.navigate(['/people']);
+    this.friendsService.addFriend(this.addNewPersonForm.value)
+      .subscribe(f => this.router.navigate(['/people']));
   }
 }
