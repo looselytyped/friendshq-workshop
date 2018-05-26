@@ -1,0 +1,11 @@
+.heart-rating {
+  line-height:32px;
+}
+
+.heart-rating .fa-heart, .heart-rating .fa-heart-o {
+  font-size: 2em;
+}
+
+.heart-rating .fa-heart {
+  color: red;
+}

@@ -2,15 +2,8 @@
   <div class="row">
     <div class="col-xs-12 col-md-9">
       <div class="list-group">
-        <a href="#"
-           class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">
-              <!--Display first friend here-->
-              {{friends[0].firstName}} {{friends[0].lastName}}
-            </h5>
-          </div>
-        </a>
+        <app-show-person *ngFor="let friend of friends"
+                         [friend]=friend></app-show-person>
       </div>
     </div>
     <div class="col-xs-12 col-md-3 sidebar">
