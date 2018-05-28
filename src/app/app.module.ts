@@ -8,6 +8,7 @@ import {
   PeopleComponent,
   PersonListComponent,
   ShowPersonComponent,
+  FullNamePipe,
 } from './people';
 
 import {
@@ -28,6 +29,7 @@ import {
     PersonListComponent,
     ShowPersonComponent,
     DashboardComponent,
+    FullNamePipe,
   ],
   imports: [
     BrowserModule,
