@@ -1,10 +1,10 @@
-import { FriendsHqPage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('friends-hq App', () => {
-  let page: FriendsHqPage;
+describe('workspace-project App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new FriendsHqPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
