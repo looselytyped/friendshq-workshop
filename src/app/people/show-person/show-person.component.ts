@@ -8,7 +8,6 @@ import {
 
 import {
   Friend,
-  FriendsService,
 } from "../../shared";
 
 @Component({
@@ -20,16 +19,13 @@ export class ShowPersonComponent implements OnInit {
   @Input() friend: Friend;
   @Output() notifyParent: EventEmitter<Friend> = new EventEmitter();
 
-  constructor(private friendService: FriendsService) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
   like() {
     this.friend.fav = !this.friend.fav;
-    this.friendService.saveFriend(this.friend)
-      .subscribe(friend => {
-        this.notifyParent.emit(friend);
-      });
+    this.notifyParent.emit(this.friend);
   }
 }
