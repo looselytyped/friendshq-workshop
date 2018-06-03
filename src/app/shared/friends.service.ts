@@ -10,7 +10,7 @@ import {
   Friend,
 } from "./";
 
-const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'http://localhost:3000';
 
 @Injectable()
 export class FriendsService {
