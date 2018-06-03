@@ -4,6 +4,11 @@ import {
   Gender,
 } from '../../shared';
 import { Router } from '@angular/router';
+import {
+  FormGroup,
+  FormControl,
+  Validators
+} from '@angular/forms';
 
 @Component({
   selector: 'app-person-form',
@@ -19,10 +24,20 @@ export class PersonFormComponent implements OnInit {
     gender: Gender.Male,
     fav: false,
   }
+
+  addNewPersonForm = new FormGroup({
+    firstName: new FormControl(this.model.firstName, [Validators.required]),
+    lastName: new FormControl(this.model.lastName, [Validators.required]),
+    gender: new FormControl(this.model.gender),
+    fav: new FormControl(this.model.fav),
+  });
+
   submitted = false;
   genders = Gender;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit() {
   }
