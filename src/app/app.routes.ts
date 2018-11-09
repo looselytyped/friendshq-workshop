@@ -2,6 +2,8 @@ import { Routes } from "@angular/router";
 
 import {
   PeopleComponent,
+  PersonFormComponent,
+  PersonListComponent,
 } from "./people";
 
 import {
@@ -11,7 +13,17 @@ import {
 export const routes: Routes = [
   {
     path: 'people',
-    component: PeopleComponent
+    component: PeopleComponent,
+    children: [
+      {
+        path: '',
+        component: PersonListComponent,
+      },
+      {
+        path: 'add',
+        component: PersonFormComponent,
+      }
+    ]
   },
   {
     path: 'dashboard',

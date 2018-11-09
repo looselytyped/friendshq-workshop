@@ -12,7 +12,7 @@ import {
 })
 export class PersonListComponent implements OnInit {
   friends: Friend[] = [];
-  displayBanner: boolean = false;
+  displayBanner = false;
 
   constructor(private friendsService: FriendsService) { }
 
