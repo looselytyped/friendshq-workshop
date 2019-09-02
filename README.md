@@ -1,6 +1,6 @@
 # FriendsHq
 
-This is an Angular workshop using TypeScript. 
+This is an Angular workshop using TypeScript.
 It attempts to demonstrate creating a simple web application.
 
 The constructs that we see being employed in this workshop are
@@ -14,12 +14,14 @@ The constructs that we see being employed in this workshop are
 - Ajax using `Http` and `Observables`
 - Smart vs. Dumb components
 - Routes, routing, and the `router-outlet`
+- Forms (template-driven and reactive)
+- Testing
 
 ## Prerequisites
 
-- Download and install `node` (`v7.6.0` or greater) per [this](https://nodejs.org/en/download/)
-  - This will install `npm` as well
-- Angular Cli - You will find instructions [here](https://github.com/angular/angular-cli#prerequisites)
+- Download and install `node` per [this](https://nodejs.org/en/download/)
+- **It is preferred you use `yarn`** — Installation instructions can be found [here](https://yarnpkg.com/en/docs/install)
+- Angular Cli - You will find instructions [here](https://www.npmjs.com/package/@angular/cli)
 
 ### Optional (but highly recommended)
 
@@ -39,7 +41,7 @@ Then open a terminal, `cd` to the directory where you cloned this repository.
 **Make sure `node`/`npm` are in your path!**
 
 ```
-npm install
+yarn install
 ```
 
 ## Testing the installation
@@ -50,7 +52,7 @@ In both `cd` to the directory where you cloned this repository.
 **In the first one, run**
 
 ```
-npm run server
+yarn run server
 ```
 
 You should see something to the effect of
