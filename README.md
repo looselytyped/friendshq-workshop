@@ -28,7 +28,7 @@ The constructs that we see being employed in this workshop are
 - Install [Git](https://git-scm.com/downloads)
 - Install [Visual Studio Code](https://code.visualstudio.com/)
   - Install the [EditorConfig extension](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-  - Install the [Angular v4 TypeScript Snippets extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2) by John Papa
+  - Install the [Angular TypeScript Snippets extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2) by John Papa
 - Install [Google Chrome](https://www.google.com/chrome/index.html)
   - Install the [Augury Extension](https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd?hl=en)
 
@@ -41,7 +41,7 @@ Then open a terminal, `cd` to the directory where you cloned this repository.
 **Make sure `node`/`npm` are in your path!**
 
 ```
-yarn install
+yarn install # or npm install
 ```
 
 ## Testing the installation
@@ -52,7 +52,7 @@ In both `cd` to the directory where you cloned this repository.
 **In the first one, run**
 
 ```
-yarn run server
+yarn run server # or npm run server
 ```
 
 You should see something to the effect of
