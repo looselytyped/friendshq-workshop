@@ -8,7 +8,7 @@ import {
 } from 'rxjs';
 import {
   Friend,
-} from "./";
+} from './';
 
 export const BASE_URL = 'http://localhost:3000';
 
@@ -18,7 +18,7 @@ export const BASE_URL = 'http://localhost:3000';
 export class FriendsService {
   private headers: HttpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
-    'Accept': 'application/json'
+    Accept: 'application/json'
   });
 
   constructor(private http: HttpClient) { }

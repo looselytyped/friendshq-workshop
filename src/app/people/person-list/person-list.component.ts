@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   Friend,
   FriendsService,
-} from "../../shared";
+} from '../../shared';
 
 @Component({
   selector: 'app-person-list',
