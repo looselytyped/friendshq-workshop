@@ -1,14 +1,14 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
 import {
   PeopleComponent,
   PersonFormComponent,
   PersonListComponent,
-} from "./people";
+} from './people';
 
 import {
   DashboardComponent,
-} from "./dashboard";
+} from './dashboard';
 
 export const routes: Routes = [
   {
