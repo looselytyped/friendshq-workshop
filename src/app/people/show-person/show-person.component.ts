@@ -8,7 +8,7 @@ import {
 
 import {
   Friend,
-} from "../../shared";
+} from '../../shared';
 
 @Component({
   selector: 'app-show-person',
