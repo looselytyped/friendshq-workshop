@@ -21,11 +21,11 @@ export class PersonFormComponent implements OnInit {
 
   model: Friend = {
     id: 5,
-    firstName: "Brian",
-    lastName: "Sam-Bodden",
+    firstName: 'Brian',
+    lastName: 'Sam-Bodden',
     gender: Gender.Male,
     fav: false,
-  }
+  };
 
   addNewPersonForm: FormGroup;
 
