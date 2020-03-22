@@ -22,18 +22,18 @@ fdescribe('ShowPersonComponent', () => {
     });
 
     friend = {
-      'id': 1,
-      'firstName': 'Michelle',
-      'lastName': 'Mulroy',
-      'gender': Gender.Female,
-      'fav': true
+      id: 1,
+      firstName: 'Michelle',
+      lastName: 'Mulroy',
+      gender: Gender.Female,
+      fav: true
     };
 
     fixture = TestBed.createComponent(ShowPersonComponent);
     component = fixture.componentInstance;
 
-    nameDisplayEl = fixture.debugElement.query(By.css("h5.mb-1"));
-    favEl = fixture.debugElement.query(By.css("span.fa"));
+    nameDisplayEl = fixture.debugElement.query(By.css('h5.mb-1'));
+    favEl = fixture.debugElement.query(By.css('span.fa'));
   });
 
   it('should be created', () => {

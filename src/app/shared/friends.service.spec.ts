@@ -20,16 +20,16 @@ fdescribe('FriendsService', () => {
       ],
     });
 
-    httpClient = TestBed.get(HttpClient);
-    httpTestingController = TestBed.get(HttpTestingController);
-    friendsService = TestBed.get(FriendsService);
+    httpClient = TestBed.inject(HttpClient);
+    httpTestingController = TestBed.inject(HttpTestingController);
+    friendsService = TestBed.inject(FriendsService);
 
     friend = {
-      'id': 1,
-      'firstName': 'Michelle',
-      'lastName': 'Mulroy',
-      'gender': Gender.Female,
-      'fav': true
+      id: 1,
+      firstName: 'Michelle',
+      lastName: 'Mulroy',
+      gender: Gender.Female,
+      fav: true
     };
   });
 
