@@ -16,12 +16,12 @@ export class PersonListComponent implements OnInit {
 
   constructor(private friendsService: FriendsService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.friendsService.getFriends()
       .subscribe(friends => this.friends = friends);
   }
 
-  showBanner(friend: Friend) {
+  showBanner(friend: Friend): void {
     this.friendsService.saveFriend(friend)
       .subscribe(f => {
         this.displayBanner = true;
