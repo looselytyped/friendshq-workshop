@@ -21,10 +21,10 @@ export class ShowPersonComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
-  like() {
+  like(): void {
     this.friend.fav = !this.friend.fav;
     this.notifyParent.emit(this.friend);
   }

@@ -53,10 +53,10 @@ export class PersonFormComponent implements OnInit {
 
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
-  onSubmit() {
+  onSubmit(): void {
     this.submitted = true;
     this.friendsService.addFriend(this.addNewPersonForm.value)
       .subscribe(f => this.router.navigate(['/people']));
