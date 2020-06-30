@@ -6,7 +6,7 @@ import { Friend } from '../../shared';
 })
 export class FullNamePipe implements PipeTransform {
 
-  transform(f: Friend, args?: any): any {
+  transform(f: Friend): string {
     return `${f.firstName} ${f.lastName}`;
   }
 
